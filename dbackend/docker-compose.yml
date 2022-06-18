@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  penglish-db:
+    container_name: penglish-postgres
+    image: postgres:12.2
+    restart: always
+    ports:
+      - 5435:5432
+    environment:
+      POSTGRES_DB: "penglish_db"
+      POSTGRES_USER: "penglish"
+      POSTGRES_PASSWORD: "penglish"
